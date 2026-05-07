@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Sanctuary - Triggers &amp; Body</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {darkMode:"class",theme:{extend:{colors:{"secondary-container":"#d8f9e0","error-container":"#f56965","error":"#ac3434","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","surface-container-low":"#f1f4f3","secondary-fixed-dim":"#caead2","tertiary-container":"#dbc6f6","secondary":"#496552","surface":"#f8faf9","outline-variant":"#adb3b2","on-surface-variant":"#5a6060","surface-container-highest":"#dde4e3","primary":"#445e97","primary-container":"#a7c0ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-primary-container":"#1f3a71","on-surface":"#2d3433","on-background":"#2d3433"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;min-height:max(884px,100dvh);}
+h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.ghost-border{box-shadow:inset 0 0 0 1px rgba(173,179,178,0.15);}
+.ambient-shadow{box-shadow:0px 20px 40px rgba(45,52,51,0.06);}
+.primary-gradient{background:linear-gradient(135deg,#445e97 0%,#a7c0ff 100%);}
+.progress-gradient{background:linear-gradient(90deg,#496552 0%,#caead2 100%);}
+</style></head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-6 h-16 max-w-5xl mx-auto">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-indigo-600" style="font-variation-settings:'FILL' 1;">spa</span><span class="text-xl font-bold tracking-tight text-indigo-900">The Sanctuary</span></div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold border-2 border-white shadow-sm">JS</div>
+</div></header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<div class="mb-12">
+<div class="flex justify-between items-end mb-3"><span class="text-sm font-semibold text-secondary">Step 3 of 7</span><span class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Deepening Reflection</span></div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full progress-gradient rounded-full" style="width:42%;"></div></div>
+</div>
+<div class="relative mb-12">
+<h1 class="text-3xl md:text-4xl font-extrabold text-on-background leading-tight tracking-tight mb-4">Let's explore the <span class="text-primary">details</span>.</h1>
+<p class="text-body-lg text-on-surface-variant leading-relaxed max-w-lg">Understanding what happened in your environment and your body helps us find the best way to support you.</p>
+<div class="absolute -right-4 -top-8 w-24 h-24 bg-tertiary-container/30 rounded-full blur-3xl -z-10"></div>
+</div>
+<section class="mb-12">
+<h2 class="text-xl font-bold text-on-surface mb-6 flex items-center gap-2">What made this situation harder?<span class="text-xs font-normal text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded-full">Multi-select</span></h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<button class="flex items-center gap-4 p-5 rounded-xl bg-surface-container-lowest ghost-border text-left hover:bg-indigo-50/50 transition-all group ambient-shadow">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined">psychology</span></div>
+<div><p class="font-bold text-on-surface">feeling judged</p><p class="text-xs text-on-surface-variant">Social pressure or eyes on you</p></div>
+</button>
+<button class="flex items-center gap-4 p-5 rounded-xl bg-surface-container-lowest ghost-border text-left hover:bg-indigo-50/50 transition-all group ambient-shadow">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined">assignment</span></div>
+<div><p class="font-bold text-on-surface">workload</p><p class="text-xs text-on-surface-variant">Too much to do at once</p></div>
+</button>
+<button class="flex items-center gap-4 p-5 rounded-xl bg-indigo-50 ring-2 ring-primary/20 text-left transition-all group ambient-shadow">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">bedtime</span></div>
+<div><p class="font-bold text-indigo-900">lack of sleep</p><p class="text-xs text-indigo-700/70">Feeling tired or drained</p></div>
+</button>
+<button class="flex items-center gap-4 p-5 rounded-xl bg-surface-container-lowest ghost-border text-left hover:bg-indigo-50/50 transition-all group ambient-shadow">
+<div class="w-12 h-12 rounded-full bg-error-container/20 flex items-center justify-center text-error group-hover:scale-110 transition-transform"><span class="material-symbols-outlined">volume_up</span></div>
+<div><p class="font-bold text-on-surface">loud noise</p><p class="text-xs text-on-surface-variant">Sensory overwhelm</p></div>
+</button>
+</div></section>
+<section class="mb-16">
+<div class="flex items-center justify-between mb-6"><h2 class="text-xl font-bold text-on-surface">What did you notice in your body?</h2></div>
+<div class="bg-surface-container-low p-8 rounded-xl relative overflow-hidden">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3 relative z-10">
+<button class="bg-surface-container-lowest py-3 px-4 rounded-full text-sm font-semibold hover:bg-white hover:shadow-md transition-all text-center">headache</button>
+<button class="bg-surface-container-lowest py-3 px-4 rounded-full text-sm font-semibold hover:bg-white hover:shadow-md transition-all text-center">racing heart</button>
+<button class="bg-primary py-3 px-4 rounded-full text-on-primary text-sm font-semibold shadow-lg scale-105 transition-all text-center">tight chest</button>
+<button class="bg-surface-container-lowest py-3 px-4 rounded-full text-sm font-semibold hover:bg-white hover:shadow-md transition-all text-center">sweaty palms</button>
+<button class="bg-surface-container-lowest py-3 px-4 rounded-full text-sm font-semibold hover:bg-white hover:shadow-md transition-all text-center">stomach ache</button>
+<button class="bg-surface-container-lowest py-3 px-4 rounded-full text-sm font-semibold hover:bg-white hover:shadow-md transition-all text-center">shaking</button>
+</div></div></section>
+<div class="flex flex-col gap-4 mb-12">
+<a href="checkin-coping.html" class="primary-gradient w-full py-5 rounded-full text-white font-bold text-lg shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">Continue to Reflection<span class="material-symbols-outlined">arrow_forward</span></a>
+<a href="checkin-thoughts.html" class="text-on-surface-variant font-medium py-3 hover:text-primary transition-colors text-center">← Back</a>
+</div></main>
+<script src="nav.js"></script>
+</body></html>

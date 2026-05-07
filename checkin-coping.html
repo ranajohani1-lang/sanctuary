@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coping Tools | The Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#d8f9e0","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","surface-container-low":"#f1f4f3","secondary-fixed-dim":"#caead2","tertiary-container":"#dbc6f6","on-tertiary-container":"#4e3e66","secondary":"#496552","surface":"#f8faf9","outline-variant":"#adb3b2","on-surface-variant":"#5a6060","surface-container-highest":"#dde4e3","primary":"#445e97","primary-container":"#a7c0ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-primary-container":"#1f3a71","on-surface":"#2d3433"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;min-height:max(884px,100dvh);}
+h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.ghost-border{border:1px solid rgba(173,179,178,0.15);}
+.organic-gradient{background:linear-gradient(135deg,#445e97 0%,#a7c0ff 100%);}
+.secondary-gradient{background:linear-gradient(135deg,#496552 0%,#caead2 100%);}
+</style></head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-6 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-indigo-600">spa</span><span class="text-xl font-bold tracking-tight text-indigo-900">The Sanctuary</span></div>
+<div class="w-8 h-8 rounded-full organic-gradient flex items-center justify-center text-[10px] text-white font-bold">SP</div>
+</div></header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<div class="mb-12">
+<div class="flex justify-between items-end mb-4"><span class="text-on-surface-variant font-medium">Step 4 of 7</span><span class="text-primary font-bold">Coping Tools</span></div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full secondary-gradient rounded-full" style="width:57%;"></div></div>
+</div>
+<section class="space-y-10">
+<div class="space-y-6">
+<h2 class="text-2xl font-extrabold tracking-tight text-on-surface">What did you do to get through it?</h2>
+<p class="text-on-surface-variant -mt-4">Select all the tools you reached for today.</p>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-start p-5 rounded-xl bg-surface-container-lowest ghost-border hover:bg-tertiary-container/20 transition-all text-left">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center mb-3 text-on-tertiary-container"><span class="material-symbols-outlined">music_note</span></div>
+<span class="font-bold text-lg">Music</span><span class="text-xs text-on-surface-variant">Listening or playing</span>
+</button>
+<button class="flex flex-col items-start p-5 rounded-xl bg-surface-container-lowest ghost-border border-2 border-primary ring-2 ring-primary/10 transition-all text-left relative overflow-hidden">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center mb-3 text-on-primary-container"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">air</span></div>
+<span class="font-bold text-lg">Breathing</span><span class="text-xs text-on-surface-variant">Deep breaths or box breathing</span>
+<div class="absolute top-3 right-3 text-primary"><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">check_circle</span></div>
+</button>
+<button class="flex flex-col items-start p-5 rounded-xl bg-surface-container-lowest ghost-border hover:bg-secondary-container/20 transition-all text-left">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center mb-3"><span class="material-symbols-outlined text-secondary">forest</span></div>
+<span class="font-bold text-lg">Nature</span><span class="text-xs text-on-surface-variant">Walking or sitting outside</span>
+</button>
+<button class="flex flex-col items-start p-5 rounded-xl bg-surface-container-lowest ghost-border hover:bg-primary-container/20 transition-all text-left">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center mb-3 text-on-primary-container"><span class="material-symbols-outlined">chat</span></div>
+<span class="font-bold text-lg">Talking</span><span class="text-xs text-on-surface-variant">Sharing with a friend</span>
+</button>
+</div>
+<div class="mt-6">
+<label class="block text-sm font-semibold mb-2 ml-1 text-on-surface-variant">Something else?</label>
+<div class="relative">
+<input type="text" placeholder="Write your own tool here..." class="w-full p-4 pl-12 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 placeholder:text-outline-variant"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">edit</span>
+</div></div></div>
+<div class="bg-surface-container-low p-8 rounded-xl space-y-8 relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-2xl font-extrabold tracking-tight text-on-surface mb-2">Did it help?</h2>
+<p class="text-on-surface-variant mb-8">Reflect on how you feel after using these tools.</p>
+<div class="space-y-4">
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest text-outline px-2"><span>Not much</span><span>A lot</span></div>
+<input type="range" min="1" max="5" value="4" class="w-full h-3 bg-surface-container-highest rounded-full appearance-none cursor-pointer accent-secondary transition-all"/>
+<div class="flex justify-between items-center px-1">
+<span class="material-symbols-outlined text-outline">sentiment_dissatisfied</span>
+<span class="material-symbols-outlined text-outline">sentiment_neutral</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">sentiment_very_satisfied</span>
+</div></div></div>
+<div class="absolute -right-16 -bottom-16 w-48 h-48 bg-secondary-container/30 rounded-full blur-3xl"></div>
+</div>
+<div class="flex items-center justify-between pt-6">
+<a href="checkin-triggers.html" class="flex items-center gap-2 px-6 py-3 rounded-full text-primary font-bold hover:bg-surface-container-high transition-all"><span class="material-symbols-outlined">arrow_back</span>Back</a>
+<a href="checkin-support.html" class="px-10 py-4 rounded-full organic-gradient text-white font-bold text-lg shadow-lg shadow-primary/20 hover:scale-105 transition-all">Continue</a>
+</div></section></main>
+<script src="nav.js"></script>
+</body></html>

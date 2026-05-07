@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Support &amp; Follow-up - The Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#65000b","secondary-container":"#d8f9e0","error-container":"#f56965","error":"#ac3434","on-error":"#fff7f6","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","surface-container-low":"#f1f4f3","secondary-fixed-dim":"#caead2","tertiary-container":"#dbc6f6","secondary":"#496552","surface":"#f8faf9","on-surface-variant":"#5a6060","surface-container-highest":"#dde4e3","primary":"#445e97","primary-container":"#a7c0ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-primary-container":"#1f3a71","on-tertiary-container":"#4e3e66","on-secondary-container":"#44604d","on-surface":"#2d3433"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;min-height:max(884px,100dvh);}
+.font-plus-jakarta,h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.ghost-border{border:1.5px solid rgba(173,179,178,0.15);}
+.primary-gradient{background:linear-gradient(135deg,#445e97 0%,#a7c0ff 100%);}
+.secondary-track-gradient{background:linear-gradient(90deg,#496552 0%,#caead2 100%);}
+.ambient-shadow{box-shadow:0px 20px 40px rgba(45,52,51,0.06);}
+</style></head>
+<body class="bg-surface text-on-surface">
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm h-16 flex justify-between items-center px-6">
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-indigo-600">spa</span><h1 class="font-plus-jakarta text-lg font-bold text-indigo-900 tracking-tight">The Sanctuary</h1></div>
+<a href="welcome.html" class="p-2 hover:bg-slate-100 rounded-full transition-all"><span class="material-symbols-outlined text-slate-500">close</span></a>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<div class="mb-10">
+<div class="flex justify-between items-end mb-4">
+<div><span class="text-secondary font-bold text-sm uppercase tracking-widest">Step 5 of 7</span>
+<h2 class="text-3xl font-plus-jakarta font-extrabold text-on-surface mt-1">Almost there.</h2></div>
+<div class="text-right"><span class="text-on-surface-variant font-medium text-sm">71% Complete</span></div>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full secondary-track-gradient rounded-full" style="width:71%;"></div></div>
+</div>
+<section class="relative mb-12">
+<div class="rounded-xl overflow-hidden aspect-[16/7] relative ambient-shadow transform -rotate-1 bg-gradient-to-br from-secondary-container via-primary-container to-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white/60" style="font-size:120px;">park</span>
+</div>
+<div class="absolute -bottom-6 -right-2 bg-tertiary-container p-6 rounded-xl ambient-shadow max-w-[70%] transform rotate-2">
+<p class="text-on-tertiary-container font-medium leading-relaxed italic">"Take a deep breath. You've shared a lot today, and we're here to help you carry it."</p>
+</div></section>
+<section class="space-y-6 mb-12 mt-16">
+<div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold text-sm">1</span><h3 class="text-xl font-plus-jakarta font-bold text-on-surface">What kind of support would help right now?</h3></div>
+<div class="grid grid-cols-1 gap-4">
+<a href="urgent-support.html" class="group flex items-center gap-4 p-5 rounded-xl bg-error-container text-left transition-all hover:scale-[1.02] active:scale-95 ambient-shadow border-2 border-transparent">
+<div class="w-12 h-12 rounded-full bg-on-error flex items-center justify-center"><span class="material-symbols-outlined text-error text-2xl">emergency</span></div>
+<div><p class="font-plus-jakarta font-bold text-on-error-container text-lg">I need help now</p><p class="text-on-error-container/80 text-sm">Chat with me anytime — I'm here to listen</p></div>
+</a>
+<button class="flex items-center gap-4 p-5 rounded-xl bg-surface-container-lowest ghost-border text-left transition-all hover:bg-surface-container-low">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center"><span class="material-symbols-outlined text-secondary">chat_bubble</span></div>
+<div><p class="font-plus-jakarta font-bold text-on-surface">A follow-up talk</p><p class="text-on-surface-variant text-sm">Schedule a check-in for later this week</p></div>
+</button>
+<button class="flex items-center gap-4 p-5 rounded-xl bg-surface-container-lowest ghost-border text-left transition-all hover:bg-surface-container-low">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center"><span class="material-symbols-outlined text-tertiary">local_library</span></div>
+<div><p class="font-plus-jakarta font-bold text-on-surface">Resource recommendations</p><p class="text-on-surface-variant text-sm">Send me articles or exercises based on my mood</p></div>
+</button>
+<button class="flex items-center gap-4 p-5 rounded-xl bg-surface-container-lowest ghost-border text-left transition-all hover:bg-surface-container-low">
+<div class="w-12 h-12 rounded-full bg-primary-container/30 flex items-center justify-center"><span class="material-symbols-outlined text-primary">done_all</span></div>
+<div><p class="font-plus-jakarta font-bold text-on-surface">Just checking in</p><p class="text-on-surface-variant text-sm">I'm okay for now, thanks for asking</p></div>
+</button>
+</div></section>
+<section class="space-y-6">
+<div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-sm">2</span><h3 class="text-xl font-plus-jakarta font-bold text-on-surface">Would you like us to follow up?</h3></div>
+<div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<p class="text-on-surface-variant leading-relaxed">Choose how soon you'd like a counselor to reach out to you.</p>
+<div class="grid grid-cols-2 gap-3">
+<button class="p-4 rounded-xl bg-surface-container-lowest ghost-border text-center transition-all hover:bg-primary-container/20"><span class="block font-plus-jakarta font-bold text-on-surface">As soon as possible</span><span class="text-xs text-on-surface-variant">High Urgency</span></button>
+<button class="p-4 rounded-xl bg-surface-container-lowest ghost-border text-center transition-all hover:bg-primary-container/20"><span class="block font-plus-jakarta font-bold text-on-surface">By end of day</span><span class="text-xs text-on-surface-variant">Today</span></button>
+<button class="p-4 rounded-xl bg-surface-container-lowest ghost-border text-center transition-all hover:bg-primary-container/20"><span class="block font-plus-jakarta font-bold text-on-surface">Next time we meet</span><span class="text-xs text-on-surface-variant">Standard</span></button>
+<button class="p-4 rounded-xl bg-surface-container-lowest ghost-border text-center transition-all hover:bg-primary-container/20"><span class="block font-plus-jakarta font-bold text-on-surface">No thanks</span><span class="text-xs text-on-surface-variant">I'm all set</span></button>
+</div></div></section>
+<div class="flex items-center justify-between gap-6 pt-12">
+<a href="checkin-coping.html" class="flex items-center gap-2 text-on-surface-variant font-bold hover:text-on-surface transition-colors"><span class="material-symbols-outlined">arrow_back</span><span>Back</span></a>
+<a href="checkin-goal.html" class="primary-gradient px-10 py-4 rounded-full text-on-primary font-plus-jakarta font-bold ambient-shadow hover:scale-105 active:scale-95 transition-all">Next Step</a>
+</div></main>
+<script src="nav.js"></script>
+</body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Sanctuary - AI Support</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#d8f9e0","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","surface-container-low":"#f1f4f3","tertiary-container":"#dbc6f6","on-tertiary-container":"#4e3e66","secondary":"#496552","surface":"#f8faf9","outline-variant":"#adb3b2","on-surface-variant":"#5a6060","on-secondary-container":"#44604d","surface-container-highest":"#dde4e3","primary":"#445e97","primary-container":"#a7c0ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-primary-container":"#1f3a71","on-surface":"#2d3433"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;min-height:max(884px,100dvh);}
+h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.chat-scroll::-webkit-scrollbar{display:none;}
+</style></head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-indigo-600">spa</span><h1 class="text-xl font-bold tracking-tight text-indigo-900">The Sanctuary</h1></div>
+<div class="h-10 w-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">JS</div>
+</header>
+<main class="flex-grow pt-16 pb-24 px-4 md:px-8 max-w-4xl mx-auto w-full flex flex-col">
+<div class="mt-8 mb-6 flex flex-col items-center text-center">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold mb-3"><span class="material-symbols-outlined text-[14px]">auto_awesome</span>AI Support Active</div>
+<h2 class="text-3xl font-bold text-on-surface tracking-tight mb-2">How are you feeling today?</h2>
+<p class="text-on-surface-variant max-w-md">I've noticed your focus has been a bit scattered since Monday. Let's find some balance together.</p>
+</div>
+<div id="chat-messages" class="flex-grow flex flex-col gap-6 mb-4 chat-scroll overflow-y-auto">
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-lowest border border-outline-variant/15 p-4 rounded-xl rounded-bl-none shadow-[0_10px_30px_rgba(45,52,51,0.04)]">
+<p class="text-on-surface">Hi there! Based on your check-in earlier, you mentioned feeling a bit overwhelmed by your upcoming math test. Would you like to try a 5-minute breathing exercise or organize your study tasks?</p>
+</div>
+<span class="text-[10px] text-outline mt-1 ml-2 font-medium">9:41 AM • Sanctuary AI</span>
+</div>
+<div class="flex flex-col items-end max-w-[85%] self-end">
+<div class="bg-gradient-to-br from-primary to-primary-container p-4 rounded-xl rounded-br-none text-on-primary shadow-md">
+<p>Organizing the study tasks sounds better. I don't know where to start.</p>
+</div>
+<span class="text-[10px] text-outline mt-1 mr-2 font-medium">9:42 AM</span>
+</div>
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-lowest border border-outline-variant/15 p-4 rounded-xl rounded-bl-none shadow-[0_10px_30px_rgba(45,52,51,0.04)]">
+<p class="text-on-surface">Great choice. Let's break it down. I see you have 3 chapters to cover. We can focus on 'Quadratic Equations' first, as you marked that as 'Tricky' last month.</p>
+<div class="mt-4 grid grid-cols-1 gap-2">
+<button class="flex items-center gap-3 p-3 bg-surface-container-low hover:bg-surface-container-high rounded-lg transition-all text-left">
+<span class="material-symbols-outlined text-tertiary">checklist</span>
+<div><p class="text-sm font-bold">Start Chapter 4 Plan</p><p class="text-[11px] text-on-surface-variant">Estimated: 45 minutes</p></div>
+</button></div></div></div>
+<div class="mt-4 mb-2 flex items-center justify-center gap-2">
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Suggestions for you</span>
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+</div>
+<div class="flex flex-wrap gap-2 justify-center pb-4">
+<button class="px-4 py-2 bg-tertiary-container text-on-tertiary-container rounded-full text-sm font-semibold hover:opacity-80 transition-opacity">Show Study Trends</button>
+<button class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-sm font-semibold hover:opacity-80 transition-opacity">Breathing Break</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface rounded-full text-sm font-semibold hover:opacity-80 transition-opacity">Contact Counselor</button>
+</div></div>
+<div class="sticky bottom-0 pb-4 pt-2 bg-surface">
+<form onsubmit="sendMsg(event)" class="relative flex items-center">
+<input id="chat-input" type="text" placeholder="Type your message..." class="w-full pl-6 pr-14 py-4 bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/20 rounded-full shadow-[0_20px_40px_rgba(45,52,51,0.06)] placeholder:text-outline-variant"/>
+<button type="submit" class="absolute right-2 p-3 bg-primary text-on-primary rounded-full hover:scale-105 transition-transform"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">send</span></button>
+</form></div></main>
+<script>
+function sendMsg(e){
+  e.preventDefault();
+  const input=document.getElementById('chat-input');
+  const text=input.value.trim();
+  if(!text)return;
+  const messages=document.getElementById('chat-messages');
+  const userMsg=document.createElement('div');
+  userMsg.className='flex flex-col items-end max-w-[85%] self-end';
+  userMsg.innerHTML=`<div class="bg-gradient-to-br from-primary to-primary-container p-4 rounded-xl rounded-br-none text-on-primary shadow-md"><p>${text.replace(/[<>]/g,'')}</p></div><span class="text-[10px] text-outline mt-1 mr-2 font-medium">Just now</span>`;
+  messages.appendChild(userMsg);
+  input.value='';
+  messages.scrollTop=messages.scrollHeight;
+  setTimeout(()=>{
+    const reply=document.createElement('div');
+    reply.className='flex flex-col items-start max-w-[85%]';
+    reply.innerHTML=`<div class="bg-surface-container-lowest border border-outline-variant/15 p-4 rounded-xl rounded-bl-none shadow-[0_10px_30px_rgba(45,52,51,0.04)]"><p class="text-on-surface">Thank you for sharing that with me. I'm here to listen. Would you like to talk more about it, or try a quick grounding exercise?</p></div><span class="text-[10px] text-outline mt-1 ml-2 font-medium">Just now • Sanctuary AI</span>`;
+    messages.appendChild(reply);
+    messages.scrollTop=messages.scrollHeight;
+  },800);
+}
+</script>
+<script src="nav.js"></script>
+</body></html>

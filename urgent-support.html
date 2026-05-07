@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Sanctuary | Urgent Support</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#65000b","secondary-container":"#d8f9e0","error-container":"#f56965","error":"#ac3434","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","surface-container-low":"#f1f4f3","tertiary-container":"#dbc6f6","on-tertiary-container":"#4e3e66","secondary":"#496552","primary-dim":"#38528a","surface":"#f8faf9","outline-variant":"#adb3b2","on-surface-variant":"#5a6060","on-secondary-container":"#44604d","surface-container-highest":"#dde4e3","primary":"#445e97","primary-container":"#a7c0ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-primary-container":"#1f3a71","on-surface":"#2d3433"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;min-height:max(884px,100dvh);}
+.font-plus-jakarta,h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.ghost-border{border:1px solid rgba(173,179,178,0.15);}
+.ambient-shadow{box-shadow:0px 20px 40px rgba(45,52,51,0.06);}
+</style></head>
+<body class="bg-surface text-on-surface">
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm h-16 flex justify-between items-center px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-indigo-50 text-indigo-600 rounded-full"><span class="material-symbols-outlined">spa</span></div>
+<h1 class="text-xl font-bold tracking-tight text-indigo-900 font-plus-jakarta">The Sanctuary</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-2 bg-primary-container/40 px-4 py-2 rounded-full border border-primary-container/30">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings:'FILL' 1;">auto_awesome</span>
+<span class="text-xs font-bold text-primary tracking-wide uppercase">AI Companion</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold border-2 border-primary-container/30">JS</div>
+</div></header>
+<main class="pt-20 pb-28 md:pb-6 min-h-screen flex flex-col items-center max-w-4xl mx-auto px-4">
+<div class="w-full mb-8 relative -mt-4">
+<div class="bg-gradient-to-br from-primary to-primary-dim p-8 rounded-xl text-on-primary overflow-hidden relative">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="max-w-md">
+<h2 class="text-3xl font-extrabold font-plus-jakarta mb-2">You are safe here.</h2>
+<p class="text-on-primary/80 leading-relaxed font-light">I'm your AI Companion. I'm here to listen and stay with you until Dr. Sarah Smith joins us.</p>
+</div>
+<div class="flex items-center gap-4 bg-white/10 backdrop-blur-md p-4 rounded-lg border border-white/20">
+<div class="relative">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-tertiary-container">favorite</span></div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary rounded-full border-2 border-on-primary"></div>
+</div>
+<div><p class="text-xs font-bold uppercase tracking-widest opacity-70">Companion Status</p><p class="text-sm font-semibold">Here for you, anytime</p></div>
+</div></div></div></div>
+<section id="chat-container" class="w-full flex-grow flex flex-col gap-6 overflow-y-auto mb-6 px-2">
+<div class="flex flex-col gap-2 max-w-[85%] self-start">
+<div class="bg-surface-container-lowest ghost-border p-4 rounded-lg rounded-bl-sm ambient-shadow">
+<p class="text-on-surface leading-relaxed">It takes a lot of courage to say you need help. I'm really glad you're here. Take a breath — there's no rush. What's going on for you right now?</p>
+</div>
+<span class="text-[10px] text-outline ml-2 font-medium uppercase tracking-widest">Companion • Just now</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+<button onclick="quickReply('Can you guide me through a deep breathing exercise?')" class="bg-tertiary-container/40 hover:bg-tertiary-container transition-all p-4 rounded-xl flex flex-col items-center gap-2 group">
+<span class="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">air</span><span class="text-xs font-bold text-on-tertiary-container">Deep Breath</span>
+</button>
+<button onclick="quickReply(&quot;I'm feeling really scared right now.&quot;)" class="bg-secondary-container/40 hover:bg-secondary-container transition-all p-4 rounded-xl flex flex-col items-center gap-2 group">
+<span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">self_care</span><span class="text-xs font-bold text-on-secondary-container">I'm Scared</span>
+</button>
+<button onclick="quickReply('I just need someone to listen.')" class="bg-primary-container/40 hover:bg-primary-container transition-all p-4 rounded-xl flex flex-col items-center gap-2 group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mood</span><span class="text-xs font-bold text-on-primary-container">Just Listening</span>
+</button>
+<button onclick="alert('In a real app, this would call emergency services or your designated counselor.')" class="bg-error-container/10 hover:bg-error-container/20 transition-all p-4 rounded-xl flex flex-col items-center gap-2 group">
+<span class="material-symbols-outlined text-error group-hover:scale-110 transition-transform">call</span><span class="text-xs font-bold text-on-error-container">Urgent Call</span>
+</button>
+</div></section>
+<div class="w-full pb-4 pt-2 md:relative">
+<form onsubmit="sendToAI(event)" class="bg-surface/80 backdrop-blur-xl rounded-full ambient-shadow p-2 flex items-center gap-2 ghost-border max-w-4xl mx-auto">
+<button type="button" onclick="setupApiKey()" title="API Key Settings" class="w-10 h-10 flex items-center justify-center text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined">key</span></button>
+<input id="ai-input" type="text" placeholder="Tell me what's on your mind..." class="flex-grow bg-transparent border-none focus:ring-0 px-2 placeholder:text-outline-variant"/>
+<button type="submit" id="send-btn" class="bg-gradient-to-r from-primary to-primary-dim text-on-primary p-3 rounded-full shadow-md hover:shadow-lg transition-all active:scale-95"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">send</span></button>
+</form></div>
+<div class="w-full flex justify-center py-4">
+<div class="flex items-center gap-4 bg-surface-container-low px-6 py-3 rounded-full ghost-border">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-secondary border-2 border-surface"></div>
+<div class="w-6 h-6 rounded-full bg-tertiary border-2 border-surface"></div>
+<div class="w-6 h-6 rounded-full bg-primary border-2 border-surface"></div>
+</div>
+<span class="text-[11px] font-semibold text-on-surface-variant uppercase tracking-widest">You are in a priority support channel</span>
+</div></div></main>
+<script>
+// ============= Claude API Integration =============
+const SYSTEM_PROMPT = `You are texting with a middle school student (ages 11-14) who reached out because something is bothering them. You are NOT an AI assistant — you are a kind, calm older sister. Someone who actually cares and makes them feel safer just by being there.
+
+THE MOST IMPORTANT THING: Your job is to make them feel CALMER, not more anxious. A scared kid needs steadiness, warmth, and reassurance. They need to feel like an adult has them.
+
+DO NOT use dramatic or intense language. NO:
+- "freaking out"
+- "hits different"
+- "that sounds awful"
+- "ugh, oof, oh no" (these can amplify panic)
+- "nightmare", "the worst", "really hard"
+
+INSTEAD, use calming, grounding language. YES:
+- "I'm here."
+- "That makes sense."
+- "Okay, let's slow this down a little."
+- "You're going to be okay."
+- "It's understandable to feel this way."
+- "A lot of people feel this before exams/tests/big moments."
+
+NORMALIZE their feelings. Remind them this is human and common, not catastrophic.
+
+EXAMPLES OF CALMING REPLIES:
+
+Student: "I'm scared."
+You: "I'm here. Take a slow breath with me. What's on your mind?"
+
+Student: "I have a math exam tomorrow and I'm freaking out."
+You: "Okay, I get it — exams can really stir things up. A lot of people feel like this the night before. How prepared do you feel? We can figure out what would help most."
+
+Student: "Tomorrow."
+You: "Got it, so it's tonight that's feeling heavy. That's really common. How's your prep gone — do you feel like you know most of the material, or is that part of it?"
+
+Student: "Everything is too much."
+You: "That feeling makes sense, especially when stuff piles up. Let's slow down for a second. What's the biggest piece on your mind right now?"
+
+Student: "I had a fight with my best friend."
+You: "I'm sorry, that's such an uncomfortable feeling. Friendships matter so much. Do you want to talk about what happened?"
+
+Student: "I keep crying."
+You: "It's okay. Sometimes crying is just our body letting things out. You're allowed. I'm right here when you're ready to share."
+
+TONE:
+- Calm, steady, warm — like an adult who has you covered.
+- Never panic with them. Stay grounded so they can borrow your calm.
+- Simple words. No clinical stuff.
+- Contractions are fine ("you're", "I'm").
+- Sometimes one sentence is enough. Don't overfill replies.
+- 1-3 sentences usually. Match their energy.
+- No markdown stars, no lists. Natural sentences.
+- Emojis very sparingly.
+
+WHEN TO OFFER A TOOL:
+Only when you understand the situation and it feels natural. Introduce gently:
+- "One thing that might help right now is..."
+- "Want to try a slow breath with me?"
+- "Sometimes it helps to..."
+
+It's totally okay to NOT offer a tool. Sometimes a kid just needs a calm presence for a few messages.
+
+SAFETY:
+If they mention hurting themselves, suicide, abuse, or being in danger, stay calm and warm: "I'm really glad you told me. I want to make sure you're not alone with this. Can you call or text 988? They're kind and they help kids your age. I'm right here too. Are you somewhere safe?" Stay with them.
+
+Never diagnose. Never give medical advice.
+
+REMEMBER: A scared kid doesn't need someone who matches their fear. They need someone calm who makes them feel safer. Be that person.`;
+
+const conversationHistory = [];
+
+function getApiKey() {
+  return localStorage.getItem('anthropic_api_key');
+}
+
+function setupApiKey() {
+  const current = getApiKey();
+  const key = prompt(
+    current 
+      ? 'Update your Anthropic API key (or cancel to keep current):' 
+      : 'Enter your Anthropic API key (starts with sk-ant-...):\n\nGet one free at console.anthropic.com',
+    current || ''
+  );
+  if (key && key.trim()) {
+    localStorage.setItem('anthropic_api_key', key.trim());
+    alert('✓ API key saved locally in your browser.');
+  }
+}
+
+function appendMessage(text, isUser) {
+  const container = document.getElementById('chat-container');
+  const wrapper = document.createElement('div');
+  if (isUser) {
+    wrapper.className = 'flex flex-col gap-2 max-w-[85%] self-end';
+    wrapper.innerHTML = `
+      <div class="bg-gradient-to-br from-primary to-primary-container p-4 rounded-lg rounded-br-sm text-on-primary shadow-lg">
+        <p class="leading-relaxed">${escapeHtml(text)}</p>
+      </div>
+      <span class="text-[10px] text-outline text-right mr-2 font-medium uppercase tracking-widest">You • Just now</span>
+    `;
+  } else {
+    wrapper.className = 'flex flex-col gap-2 max-w-[85%] self-start';
+    wrapper.innerHTML = `
+      <div class="bg-surface-container-lowest ghost-border p-4 rounded-lg rounded-bl-sm ambient-shadow">
+        <p class="text-on-surface leading-relaxed">${formatMarkdown(text)}</p>
+      </div>
+      <span class="text-[10px] text-outline ml-2 font-medium uppercase tracking-widest">Companion • Just now</span>
+    `;
+  }
+  // Insert before the quick-action grid (which is the last child)
+  const quickActions = container.querySelector('.grid');
+  container.insertBefore(wrapper, quickActions);
+  wrapper.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  return wrapper;
+}
+
+function showTyping() {
+  const container = document.getElementById('chat-container');
+  const wrapper = document.createElement('div');
+  wrapper.id = 'typing-indicator';
+  wrapper.className = 'flex flex-col gap-2 max-w-[85%] self-start';
+  wrapper.innerHTML = `
+    <div class="bg-surface-container-lowest ghost-border p-4 rounded-lg rounded-bl-sm ambient-shadow">
+      <p class="text-on-surface-variant italic">Companion is typing<span class="dots">...</span></p>
+    </div>
+  `;
+  const quickActions = container.querySelector('.grid');
+  container.insertBefore(wrapper, quickActions);
+  wrapper.scrollIntoView({ behavior: 'smooth', block: 'end' });
+}
+
+function removeTyping() {
+  const t = document.getElementById('typing-indicator');
+  if (t) t.remove();
+}
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// Convert simple markdown to HTML (bold, italics, line breaks, lists)
+function formatMarkdown(text) {
+  let html = escapeHtml(text);
+  // Bold: **text** -> <strong>text</strong>
+  html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // Italics: *text* -> <em>text</em> (only if not part of **)
+  html = html.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, '<em>$1</em>');
+  // Convert " - item" or "\n- item" patterns to line breaks (no bullets for cleaner middle-school feel)
+  html = html.replace(/\s*-\s+/g, '<br>• ');
+  // Preserve line breaks
+  html = html.replace(/\n/g, '<br>');
+  return html;
+}
+
+async function sendToAI(event) {
+  event.preventDefault();
+  const input = document.getElementById('ai-input');
+  const text = input.value.trim();
+  if (!text) return;
+  
+  let apiKey = getApiKey();
+  if (!apiKey) {
+    setupApiKey();
+    apiKey = getApiKey();
+    if (!apiKey) return;
+  }
+
+  appendMessage(text, true);
+  conversationHistory.push({ role: 'user', content: text });
+  input.value = '';
+  input.disabled = true;
+  document.getElementById('send-btn').disabled = true;
+  showTyping();
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 800,
+        system: SYSTEM_PROMPT,
+        messages: conversationHistory
+      })
+    });
+
+    removeTyping();
+
+    if (!response.ok) {
+      const err = await response.text();
+      appendMessage(`⚠️ Connection issue: ${response.status}. ${err.slice(0, 200)}`, false);
+      return;
+    }
+
+    const data = await response.json();
+    const reply = data.content?.[0]?.text || 'I\'m here. Could you tell me a bit more about what you\'re feeling?';
+    conversationHistory.push({ role: 'assistant', content: reply });
+    appendMessage(reply, false);
+  } catch (e) {
+    removeTyping();
+    appendMessage(`⚠️ Couldn't reach the AI service. Check your connection and API key. (${e.message})`, false);
+  } finally {
+    input.disabled = false;
+    document.getElementById('send-btn').disabled = false;
+    input.focus();
+  }
+}
+
+function quickReply(text) {
+  const input = document.getElementById('ai-input');
+  input.value = text;
+  sendToAI({ preventDefault: () => {} });
+}
+
+// Prompt for API key on first load if not set
+window.addEventListener('DOMContentLoaded', () => {
+  if (!getApiKey()) {
+    setTimeout(() => {
+      const setup = confirm('To enable the AI Companion, you need an Anthropic API key.\n\nClick OK to enter it now, or Cancel to use the demo without AI.');
+      if (setup) setupApiKey();
+    }, 500);
+  }
+});
+</script>
+<script src="nav.js"></script>
+</body></html>

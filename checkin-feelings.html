@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Sanctuary - Emotional Check-in</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {darkMode:"class",theme:{extend:{colors:{"on-error-container":"#65000b","secondary-container":"#d8f9e0","error":"#ac3434","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","surface-container-low":"#f1f4f3","secondary-fixed-dim":"#caead2","on-tertiary-container":"#4e3e66","tertiary-container":"#dbc6f6","secondary":"#496552","surface":"#f8faf9","outline-variant":"#adb3b2","on-surface-variant":"#5a6060","surface-container-highest":"#dde4e3","tertiary-fixed":"#dbc6f6","primary":"#445e97","primary-container":"#a7c0ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-primary-container":"#1f3a71","surface-dim":"#d4dcda","on-surface":"#2d3433","surface-container":"#eaefee"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;min-height:max(884px,100dvh);}
+h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+</style></head>
+<body class="bg-surface text-on-surface min-h-screen">
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-3">
+<a href="welcome.html" class="p-2 hover:bg-slate-100 rounded-full transition-all"><span class="material-symbols-outlined text-indigo-600">close</span></a>
+<span class="text-xl font-bold tracking-tight text-indigo-900">The Sanctuary</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">JS</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-12">
+<div class="flex items-center gap-3">
+<div class="h-3 flex-1 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full w-1/7 bg-gradient-to-r from-secondary to-secondary-fixed-dim rounded-full" style="width:14%;"></div></div>
+<span class="text-on-surface-variant font-semibold text-sm">Step 1 of 7</span>
+</div>
+<section class="space-y-8">
+<div class="space-y-2">
+<h1 class="text-3xl font-extrabold text-on-surface tracking-tight leading-tight">How are you feeling right now?</h1>
+<p class="text-on-surface-variant body-lg">Your feelings are valid, and there is no wrong answer here.</p>
+</div>
+<div class="relative pt-12 pb-8">
+<div class="absolute inset-0 bg-secondary-container/20 blur-3xl rounded-full -z-10"></div>
+<div class="flex justify-between items-end gap-2 px-2">
+<button onclick="selectMood(this,1)" class="mood-btn flex flex-col items-center gap-4 group transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-on-surface-variant group-hover:bg-white group-hover:shadow-xl transition-all"><span class="material-symbols-outlined text-3xl">sentiment_very_dissatisfied</span></div>
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Very Low</span>
+</button>
+<button onclick="selectMood(this,2)" class="mood-btn flex flex-col items-center gap-4 group transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-on-surface-variant group-hover:bg-white group-hover:shadow-xl transition-all"><span class="material-symbols-outlined text-3xl">sentiment_dissatisfied</span></div>
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Low</span>
+</button>
+<button onclick="selectMood(this,3)" class="mood-btn flex flex-col items-center gap-4 group transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-16 h-16 rounded-2xl bg-white shadow-lg flex items-center justify-center text-primary transition-all outline outline-2 outline-primary/10"><span class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1;">sentiment_neutral</span></div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Neutral</span>
+</button>
+<button onclick="selectMood(this,4)" class="mood-btn flex flex-col items-center gap-4 group transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-on-surface-variant group-hover:bg-white group-hover:shadow-xl transition-all"><span class="material-symbols-outlined text-3xl">sentiment_satisfied</span></div>
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Good</span>
+</button>
+<button onclick="selectMood(this,5)" class="mood-btn flex flex-col items-center gap-4 group transition-all duration-300 transform hover:-translate-y-2">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-on-surface-variant group-hover:bg-white group-hover:shadow-xl transition-all"><span class="material-symbols-outlined text-3xl">sentiment_very_satisfied</span></div>
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Great</span>
+</button>
+</div>
+<div class="mt-8 h-1 w-full bg-outline-variant/10 rounded-full relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full shadow-lg border-4 border-white"></div>
+</div></div>
+</section>
+<section class="space-y-6 pt-6">
+<div class="space-y-2">
+<h2 class="text-2xl font-bold text-on-surface tracking-tight">Which word fits your week?</h2>
+<p class="text-on-surface-variant">Select the energy that best describes your last few days.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div onclick="toggleWord(this)" class="word-card p-6 rounded-xl bg-surface-container-low flex flex-col items-start gap-4 cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-error">air</span><span class="font-bold text-lg">anxious</span>
+</div>
+<div onclick="toggleWord(this)" class="word-card p-6 rounded-xl bg-surface-container-low flex flex-col items-start gap-4 cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-tertiary">bedtime</span><span class="font-bold text-lg">tired</span>
+</div>
+<div onclick="toggleWord(this)" class="word-card p-6 rounded-xl bg-surface-container-lowest outline outline-2 outline-tertiary-fixed shadow-sm flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">wb_sunny</span><span class="font-bold text-lg text-primary">hopeful</span>
+</div>
+<div onclick="toggleWord(this)" class="word-card p-6 rounded-xl bg-surface-container-low flex flex-col items-start gap-4 cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-secondary">favorite</span><span class="font-bold text-lg">grateful</span>
+</div>
+<div onclick="toggleWord(this)" class="word-card p-6 rounded-xl bg-surface-container-low flex flex-col items-start gap-4 cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-outline">cloud</span><span class="font-bold text-lg">busy</span>
+</div>
+<div onclick="toggleWord(this)" class="word-card p-6 rounded-xl bg-surface-container-low flex flex-col items-start gap-4 cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-tertiary">palette</span><span class="font-bold text-lg">creative</span>
+</div></div></section>
+<div class="flex gap-4 pt-10">
+<a href="welcome.html" class="flex-1 py-4 px-6 rounded-full font-bold text-primary bg-surface-container-highest hover:bg-surface-dim transition-all text-center">Back</a>
+<a href="checkin-thoughts.html" class="flex-[2] py-4 px-6 rounded-full font-bold text-on-primary bg-gradient-to-br from-primary to-primary-container shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95 text-center">Continue to Reflection</a>
+</div></main>
+<div class="fixed -bottom-24 -left-24 w-64 h-64 bg-tertiary-container/30 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<div class="fixed -top-12 -right-12 w-96 h-96 bg-secondary-container/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<script>
+function selectMood(btn,val){
+  document.querySelectorAll('.mood-btn').forEach(b=>{
+    const inner=b.querySelector('div'); inner.className='w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-on-surface-variant group-hover:bg-white group-hover:shadow-xl transition-all';
+    b.querySelector('span:last-child').className='text-xs font-semibold uppercase tracking-wider text-on-surface-variant';
+  });
+  const inner=btn.querySelector('div'); inner.className='w-16 h-16 rounded-2xl bg-white shadow-lg flex items-center justify-center text-primary transition-all outline outline-2 outline-primary/10';
+  btn.querySelector('span:last-child').className='text-xs font-bold uppercase tracking-wider text-primary';
+}
+function toggleWord(el){
+  const isSel=el.classList.contains('outline');
+  document.querySelectorAll('.word-card').forEach(c=>{c.className='word-card p-6 rounded-xl bg-surface-container-low flex flex-col items-start gap-4 cursor-pointer hover:bg-surface-container-highest transition-colors';});
+  if(!isSel){el.className='word-card p-6 rounded-xl bg-surface-container-lowest outline outline-2 outline-tertiary-fixed shadow-sm flex flex-col items-start gap-4 cursor-pointer';}
+}
+</script>
+<script src="nav.js"></script>
+</body></html>

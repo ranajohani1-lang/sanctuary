@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Sanctuary - Impact &amp; Mind</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {darkMode:"class",theme:{extend:{colors:{"secondary-container":"#d8f9e0","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","surface-container-low":"#f1f4f3","secondary-fixed-dim":"#caead2","tertiary-container":"#dbc6f6","tertiary-fixed":"#dbc6f6","secondary":"#496552","surface":"#f8faf9","outline-variant":"#adb3b2","on-surface-variant":"#5a6060","surface-container-highest":"#dde4e3","primary":"#445e97","primary-container":"#a7c0ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-primary-container":"#1f3a71","on-surface":"#2d3433"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;min-height:max(884px,100dvh);}
+h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.ghost-border{border:1px solid rgba(173,179,178,0.15);}
+</style></head>
+<body class="bg-surface text-on-surface">
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-indigo-600">spa</span><span class="text-xl font-bold tracking-tight text-indigo-900">The Sanctuary</span></div>
+<div class="w-9 h-9 rounded-full bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-700">JS</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-4xl mx-auto">
+<div class="mb-12">
+<div class="flex justify-between items-end mb-4">
+<div><span class="text-secondary font-semibold text-sm tracking-wider uppercase">Step 2 of 7</span>
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface mt-1 tracking-tight">Impact &amp; Mind</h1></div>
+<div class="hidden md:block text-on-surface-variant text-sm font-medium">Almost there</div>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim rounded-full" style="width:28%;"></div>
+</div></div>
+<section class="space-y-12">
+<div class="space-y-6">
+<h2 class="text-2xl font-bold text-on-primary-container">Did anything happen this week?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<label class="relative cursor-pointer group"><input class="peer sr-only" name="happened" type="radio"/>
+<div class="h-full p-8 rounded-xl bg-surface-container-low ghost-border peer-checked:bg-primary-container peer-checked:ring-4 peer-checked:ring-primary peer-checked:scale-105 transition-all duration-300 flex flex-col items-center justify-center gap-4 hover:shadow-lg">
+<span class="material-symbols-outlined text-4xl text-tertiary" style="font-variation-settings:'FILL' 1;">check_circle</span><span class="font-bold text-lg">Yes</span>
+</div></label>
+<label class="relative cursor-pointer group"><input class="peer sr-only" name="happened" type="radio"/>
+<div class="h-full p-8 rounded-xl bg-surface-container-low ghost-border peer-checked:bg-primary-container peer-checked:ring-4 peer-checked:ring-primary peer-checked:scale-105 transition-all duration-300 flex flex-col items-center justify-center gap-4 hover:shadow-lg">
+<span class="material-symbols-outlined text-4xl text-tertiary">cancel</span><span class="font-bold text-lg">No</span>
+</div></label>
+<label class="relative cursor-pointer group"><input class="peer sr-only" name="happened" type="radio"/>
+<div class="h-full p-8 rounded-xl bg-surface-container-low ghost-border peer-checked:bg-primary-container peer-checked:ring-4 peer-checked:ring-primary peer-checked:scale-105 transition-all duration-300 flex flex-col items-center justify-center gap-4 hover:shadow-lg">
+<span class="material-symbols-outlined text-4xl text-tertiary">help_outline</span><span class="font-bold text-lg">Not sure</span>
+</div></label>
+</div></div>
+<div class="space-y-6">
+<div class="bg-surface-container-low rounded-xl p-8 relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary-container/30 rounded-full blur-3xl"></div>
+<h2 class="text-2xl font-bold text-on-primary-container relative z-10">What was on your mind?</h2>
+<p class="text-on-surface-variant mb-8 relative z-10">Select all that apply. Your feelings are valid.</p>
+<div class="flex flex-wrap gap-3 relative z-10">
+<button onclick="toggleChip(this)" class="chip px-6 py-3 rounded-full bg-surface-container-lowest ghost-border hover:bg-primary-container/20 transition-all text-on-surface font-medium flex items-center gap-2"><span class="material-symbols-outlined text-xl">group</span>Conflict</button>
+<button onclick="toggleChip(this)" class="chip px-6 py-3 rounded-full bg-surface-container-lowest ghost-border hover:bg-primary-container/20 transition-all text-on-surface font-medium flex items-center gap-2"><span class="material-symbols-outlined text-xl">school</span>Grades</button>
+<button onclick="toggleChip(this)" class="chip px-6 py-3 rounded-full bg-surface-container-lowest ghost-border hover:bg-primary-container/20 transition-all text-on-surface font-medium flex items-center gap-2"><span class="material-symbols-outlined text-xl">favorite</span>Relationships</button>
+<button onclick="toggleChip(this)" class="chip px-6 py-3 rounded-full bg-surface-container-lowest ghost-border hover:bg-primary-container/20 transition-all text-on-surface font-medium flex items-center gap-2"><span class="material-symbols-outlined text-xl">home</span>Home Life</button>
+<button onclick="toggleChip(this)" class="chip px-6 py-3 rounded-full bg-surface-container-lowest ghost-border hover:bg-primary-container/20 transition-all text-on-surface font-medium flex items-center gap-2"><span class="material-symbols-outlined text-xl">self_improvement</span>Loneliness</button>
+<button onclick="toggleChip(this)" class="chip px-6 py-3 rounded-full bg-surface-container-lowest ghost-border hover:bg-primary-container/20 transition-all text-on-surface font-medium flex items-center gap-2"><span class="material-symbols-outlined text-xl">bolt</span>Stress</button>
+<button onclick="toggleChip(this)" class="chip px-6 py-3 rounded-full bg-surface-container-lowest ghost-border hover:bg-primary-container/20 transition-all text-on-surface font-medium flex items-center gap-2"><span class="material-symbols-outlined text-xl">add</span>Something else</button>
+</div></div></div>
+<div class="space-y-6">
+<div class="group">
+<h2 class="text-2xl font-bold text-on-primary-container flex items-center gap-3">Want to share more?<span class="text-sm font-normal text-on-surface-variant/60">(Optional)</span></h2>
+<div class="mt-6 relative">
+<div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50 blur-xl -z-10 rounded-xl group-focus-within:opacity-100 transition-opacity"></div>
+<textarea class="w-full min-h-[200px] p-6 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md ghost-border focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-lg leading-relaxed placeholder:text-on-surface-variant/40" placeholder="Type your thoughts here... No one else sees this unless you want them to."></textarea>
+</div></div></div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-8">
+<button class="w-full md:w-auto px-10 py-4 rounded-full text-primary font-bold hover:bg-primary-container/10 transition-all order-2 md:order-1">Save for later</button>
+<div class="flex flex-col md:flex-row gap-4 w-full md:w-auto order-1 md:order-2">
+<a href="checkin-feelings.html" class="w-full md:w-auto px-10 py-4 rounded-full bg-surface-container-highest text-primary font-bold hover:bg-surface-container-high transition-all text-center">Previous</a>
+<a href="checkin-triggers.html" class="w-full md:w-auto px-12 py-4 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold shadow-lg hover:shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all text-center">Continue</a>
+</div></div></section></main>
+<script>
+function toggleChip(btn) {
+  const isSelected = btn.classList.contains('chip-selected');
+  if (isSelected) {
+    btn.classList.remove('chip-selected', 'bg-primary', 'text-on-primary', 'shadow-lg', 'scale-105');
+    btn.classList.add('bg-surface-container-lowest', 'ghost-border', 'text-on-surface', 'hover:bg-primary-container/20');
+  } else {
+    btn.classList.add('chip-selected', 'bg-primary', 'text-on-primary', 'shadow-lg', 'scale-105');
+    btn.classList.remove('bg-surface-container-lowest', 'ghost-border', 'text-on-surface', 'hover:bg-primary-container/20');
+  }
+}
+</script>
+<script src="nav.js"></script>
+</body></html>

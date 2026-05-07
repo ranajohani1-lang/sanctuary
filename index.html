@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Sanctuary - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {darkMode:"class",theme:{extend:{colors:{"on-error-container":"#65000b","surface-tint":"#445e97","secondary-container":"#d8f9e0","error":"#ac3434","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","primary-fixed-dim":"#99b2f1","surface-container-low":"#f1f4f3","secondary-fixed-dim":"#caead2","on-tertiary-container":"#4e3e66","primary-dim":"#38528a","tertiary-container":"#dbc6f6","secondary":"#496552","surface":"#f8faf9","secondary-fixed":"#d8f9e0","outline-variant":"#adb3b2","on-secondary-container":"#44604d","on-surface-variant":"#5a6060","on-secondary-fixed-variant":"#4e6b57","secondary-dim":"#3d5946","surface-container-highest":"#dde4e3","inverse-surface":"#0b0f0f","on-background":"#2d3433","inverse-primary":"#a4bdfd","error-container":"#f56965","on-tertiary-fixed":"#3a2b51","on-primary-fixed":"#02255c","surface-bright":"#f8faf9","tertiary-fixed-dim":"#ccb9e8","surface-dim":"#d4dcda","primary":"#445e97","on-primary-fixed-variant":"#29447b","primary-container":"#a7c0ff","on-tertiary":"#fef7ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-secondary-fixed":"#324e3c","on-primary-container":"#1f3a71","background":"#f8faf9","surface-variant":"#dde4e3","primary-fixed":"#a7c0ff","inverse-on-surface":"#9b9d9d","error-dim":"#70030f","tertiary-dim":"#5c4c74","on-tertiary-fixed-variant":"#574770","on-surface":"#2d3433","on-error":"#fff7f6","surface-container":"#eaefee","tertiary-fixed":"#dbc6f6","on-secondary":"#e7ffeb"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"],label:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;background-color:#f8faf9;color:#2d3433;min-height:max(884px,100dvh);}
+h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;display:inline-block;line-height:1;}
+.organic-gradient{background:linear-gradient(135deg,#445e97 0%,#a7c0ff 100%);}
+.ghost-border{border:1px solid rgba(173,179,178,0.15);}
+</style>
+</head>
+<body class="min-h-screen selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm h-16 flex justify-between items-center px-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-indigo-600">spa</span>
+<span class="font-plus-jakarta text-lg font-bold text-indigo-900 tracking-tight">The Sanctuary</span>
+</div>
+<div class="flex items-center"><div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] text-on-surface-variant font-bold">EN</div></div>
+</header>
+<main class="relative pt-24 pb-12 px-4 flex flex-col items-center justify-center min-h-screen">
+<div class="absolute top-20 -left-20 w-80 h-80 bg-secondary-container opacity-40 rounded-full blur-[100px] -z-10"></div>
+<div class="absolute bottom-10 -right-20 w-96 h-96 bg-tertiary-container opacity-30 rounded-full blur-[120px] -z-10"></div>
+<div class="w-full max-w-xl">
+<div class="text-center mb-10 space-y-3">
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight leading-tight">Welcome back to your <br/><span class="text-primary italic">safe space.</span></h1>
+<p class="text-on-surface-variant body-lg max-w-md mx-auto">Take a deep breath. Let's get you settled into your personal sanctuary.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-[0_20px_40px_rgba(45,52,51,0.04)] ghost-border relative overflow-hidden">
+<form class="space-y-8" onsubmit="event.preventDefault(); window.location.href='welcome.html';">
+<div class="space-y-4">
+<p class="text-sm font-semibold uppercase tracking-widest text-outline ml-1">I am a...</p>
+<div class="grid grid-cols-2 gap-4">
+<label class="relative cursor-pointer group">
+<input checked="" class="peer sr-only" name="role" type="radio" value="student"/>
+<div class="p-6 rounded-xl bg-surface-container-low ghost-border text-center transition-all duration-300 peer-checked:bg-tertiary-container/30 peer-checked:ring-2 peer-checked:ring-tertiary">
+<span class="material-symbols-outlined text-tertiary mb-2 text-3xl">school</span>
+<p class="font-bold text-on-surface">Student</p>
+</div></label>
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="role" type="radio" value="teacher"/>
+<div class="p-6 rounded-xl bg-surface-container-low ghost-border text-center transition-all duration-300 peer-checked:bg-secondary-container/30 peer-checked:ring-2 peer-checked:ring-secondary">
+<span class="material-symbols-outlined text-secondary mb-2 text-3xl">clinical_notes</span>
+<p class="font-bold text-on-surface">Teacher</p>
+</div></label>
+</div></div>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-on-surface-variant ml-4" for="username">Username or Email</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-outline">alternate_email</span>
+<input class="w-full pl-14 pr-6 py-4 bg-surface-container-low border-none rounded-full focus:ring-2 focus:ring-primary-container placeholder:text-outline-variant transition-all outline-none" id="username" placeholder="hello@yoursanctuary.com" type="text"/>
+</div></div>
+<div class="space-y-2">
+<div class="flex justify-between items-center px-4">
+<label class="text-sm font-medium text-on-surface-variant" for="password">Password</label>
+<a class="text-xs text-primary font-semibold hover:underline" href="#">Forgot?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-outline">lock</span>
+<input class="w-full pl-14 pr-6 py-4 bg-surface-container-low border-none rounded-full focus:ring-2 focus:ring-primary-container placeholder:text-outline-variant transition-all outline-none" id="password" placeholder="••••••••" type="password"/>
+</div></div></div>
+<div class="pt-4">
+<button class="w-full organic-gradient text-on-primary font-bold py-4 rounded-full shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform duration-200" type="submit">Enter The Sanctuary</button>
+</div></form>
+<div class="mt-8 text-center"><p class="text-sm text-on-surface-variant">Don't have an account yet? <a class="text-primary font-bold hover:underline" href="welcome.html">Start your journey</a></p></div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+<div class="bg-surface-container-highest/90 backdrop-blur-md px-6 py-3 rounded-full flex items-center gap-3 shadow-xl border border-white/50">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<span class="text-xs font-medium text-on-surface">End-to-end encrypted sanctuary</span>
+</div></div>
+<div id="nav-placeholder"></div>
+<script src="nav.js"></script>
+</body></html>

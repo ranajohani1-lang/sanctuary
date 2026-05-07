@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welcome to The Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {darkMode:"class",theme:{extend:{colors:{"on-error-container":"#65000b","surface-tint":"#445e97","secondary-container":"#d8f9e0","error":"#ac3434","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","primary-fixed-dim":"#99b2f1","surface-container-low":"#f1f4f3","secondary-fixed-dim":"#caead2","on-tertiary-container":"#4e3e66","primary-dim":"#38528a","tertiary-container":"#dbc6f6","secondary":"#496552","surface":"#f8faf9","secondary-fixed":"#d8f9e0","outline-variant":"#adb3b2","on-secondary-container":"#44604d","on-surface-variant":"#5a6060","on-secondary-fixed-variant":"#4e6b57","secondary-dim":"#3d5946","surface-container-highest":"#dde4e3","inverse-surface":"#0b0f0f","on-background":"#2d3433","inverse-primary":"#a4bdfd","error-container":"#f56965","on-tertiary-fixed":"#3a2b51","on-primary-fixed":"#02255c","surface-bright":"#f8faf9","tertiary-fixed-dim":"#ccb9e8","surface-dim":"#d4dcda","primary":"#445e97","on-primary-fixed-variant":"#29447b","primary-container":"#a7c0ff","on-tertiary":"#fef7ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-secondary-fixed":"#324e3c","on-primary-container":"#1f3a71","background":"#f8faf9","surface-variant":"#dde4e3","primary-fixed":"#a7c0ff","inverse-on-surface":"#9b9d9d","error-dim":"#70030f","tertiary-dim":"#5c4c74","on-tertiary-fixed-variant":"#574770","on-surface":"#2d3433","on-error":"#fff7f6","surface-container":"#eaefee","tertiary-fixed":"#dbc6f6","on-secondary":"#e7ffeb"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"],label:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;min-height:max(884px,100dvh);}
+h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;display:inline-block;line-height:1;}
+.bg-primary-gradient{background:linear-gradient(135deg,#445e97 0%,#a7c0ff 100%);}
+</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm h-16 px-6 flex justify-between items-center">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-indigo-600">spa</span><span class="text-xl font-bold tracking-tight text-indigo-900 font-headline">The Sanctuary</span></div>
+<div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold text-sm">JS</div></div>
+</nav>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto space-y-12">
+<section class="relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-7 space-y-6 z-10">
+<div class="inline-flex items-center px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-sm font-semibold"><span class="material-symbols-outlined text-sm mr-2">waving_hand</span>Welcome back, Jordan</div>
+<h1 class="text-5xl md:text-6xl font-extrabold text-on-surface leading-tight tracking-tight">Your mind deserves a <span class="text-primary italic">quiet space.</span></h1>
+<p class="text-lg text-on-surface-variant max-w-md leading-relaxed">Take a moment for yourself today. Checking in helps us understand how to best support your personal goals and well-being.</p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a href="privacy.html" class="bg-primary-gradient text-on-primary px-8 py-5 rounded-full font-bold text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95 flex items-center justify-center gap-2">Start Check-in<span class="material-symbols-outlined">arrow_forward</span></a>
+<a href="dashboard-student.html" class="bg-surface-container-high text-primary px-8 py-5 rounded-full font-bold text-lg hover:bg-surface-container-highest transition-colors text-center">View Progress</a>
+</div></div>
+<div class="md:col-span-5 relative">
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-tertiary-container rounded-full blur-3xl opacity-60"></div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary-container rounded-full blur-3xl opacity-60"></div>
+<div class="relative rounded-xl overflow-hidden aspect-[4/5] shadow-2xl rotate-2 bg-gradient-to-br from-primary-container to-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80" style="font-size:120px;">self_improvement</span>
+</div></div></div></section>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm"><span class="material-symbols-outlined text-primary">psychology</span></div>
+<h3 class="text-2xl font-bold mb-3">Why check-in?</h3>
+<p class="text-on-surface-variant leading-relaxed">Think of this as a daily digital pulse. We use your reflections to suggest resources, notify your mentor when you need extra support, and track the trends that matter to you. It's 100% focused on your growth.</p>
+</div>
+<div class="mt-8 flex items-center gap-3">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container border-2 border-surface-container-low"></div>
+<div class="w-10 h-10 rounded-full bg-tertiary-container border-2 border-surface-container-low"></div>
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-primary border-2 border-surface-container-low">+12</div>
+</div>
+<span class="ml-2 flex items-center text-sm font-medium text-on-surface-variant italic">Trusted by your school support team</span>
+</div></div>
+<div class="bg-tertiary-container/30 p-8 rounded-xl space-y-4 flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-5xl text-tertiary mb-2" style="font-variation-settings:'FILL' 1;">favorite</span>
+<h4 class="text-xl font-bold text-on-tertiary-container">Private &amp; Safe</h4>
+<p class="text-sm text-on-tertiary-container/80">Your data is only shared with your designated support counselor to ensure you have what you need to thrive.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-1 bg-secondary-fixed rounded-full"></div>
+<h4 class="text-lg font-bold">Today's Focus</h4>
+<div class="space-y-2 w-full">
+<div class="p-3 bg-secondary-container/50 rounded-lg text-sm font-medium text-on-secondary-container">Mindful Breathing</div>
+<div class="p-3 bg-surface-container-low rounded-lg text-sm text-on-surface-variant">Sleep Hygiene</div>
+</div></div>
+<div class="md:col-span-2 bg-primary-container p-1 rounded-xl">
+<div class="bg-white h-full w-full rounded-[2.75rem] p-8 flex items-center gap-6">
+<div class="hidden sm:flex w-32 h-32 rounded-3xl overflow-hidden shrink-0 bg-gradient-to-br from-secondary-container to-secondary items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-size:60px;">eco</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-bold text-xl">"Small steps everyday lead to big shifts over time."</h4>
+<p class="text-on-surface-variant text-sm">— Sanctuary Daily Wisdom</p>
+</div></div></div>
+</section>
+</main>
+<script src="nav.js"></script>
+</body></html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Dashboard | The Sanctuary</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#d8f9e0","outline":"#757c7b","on-primary":"#f9f8ff","tertiary":"#685881","surface-container-low":"#f1f4f3","secondary-fixed":"#d8f9e0","tertiary-container":"#dbc6f6","on-tertiary-container":"#4e3e66","secondary":"#496552","surface":"#f8faf9","outline-variant":"#adb3b2","on-surface-variant":"#5a6060","surface-container-highest":"#dde4e3","primary":"#445e97","primary-container":"#a7c0ff","surface-container-high":"#e4e9e8","surface-container-lowest":"#ffffff","on-primary-container":"#1f3a71","on-surface":"#2d3433"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},fontFamily:{headline:["Plus Jakarta Sans"],body:["Be Vietnam Pro"]}}}}
+</script>
+<style>
+body{font-family:'Be Vietnam Pro',sans-serif;background-color:#f8faf9;color:#2d3433;min-height:max(884px,100dvh);}
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.primary-gradient{background:linear-gradient(135deg,#445e97 0%,#a7c0ff 100%);}
+</style></head>
+<body class="bg-surface text-on-surface mb-24 md:mb-0">
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-6 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-indigo-600" style="font-variation-settings:'FILL' 1;">spa</span><span class="text-xl font-bold tracking-tight text-indigo-900">The Sanctuary</span></div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-6 items-center mr-8">
+<a class="text-indigo-700 font-bold font-headline text-sm" href="#">Home</a>
+<a class="text-slate-500 hover:text-indigo-500 transition-colors font-semibold text-sm" href="ai-chat.html">Chat</a>
+<a class="text-slate-500 hover:text-indigo-500 transition-colors font-semibold text-sm" href="checkin-goal.html">Goals</a>
+<a class="text-slate-500 hover:text-indigo-500 transition-colors font-semibold text-sm" href="urgent-support.html">Help</a>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold border-2 border-primary-container">JS</div>
+</div></div></nav>
+<main class="max-w-7xl mx-auto px-6 pt-24 pb-12">
+<section class="relative mb-12 overflow-hidden rounded-xl bg-surface-container-low p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+<div class="relative z-10 flex-1 space-y-6">
+<div>
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight leading-tight">How are you feeling <br/><span class="text-primary italic">this afternoon, Alex?</span></h1>
+<p class="text-on-surface-variant text-lg mt-4 max-w-lg">It's been 4 hours since your last check-in. Taking a moment for yourself helps keep your garden growing.</p>
+</div>
+<div class="flex flex-wrap gap-4">
+<a href="checkin-feelings.html" class="primary-gradient text-on-primary px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] active:scale-95 flex items-center gap-2"><span class="material-symbols-outlined">self_improvement</span>Check In Now</a>
+<button class="bg-surface-container-highest text-primary px-8 py-4 rounded-full font-bold hover:bg-surface-container-high transition-all flex items-center gap-2"><span class="material-symbols-outlined">calendar_month</span>Schedule Support</button>
+</div></div>
+<div class="flex-1 w-full max-w-md aspect-square relative">
+<div class="absolute inset-0 bg-secondary-container/30 rounded-full blur-3xl -z-10"></div>
+<div class="w-full h-full bg-gradient-to-br from-secondary-container via-primary-container to-tertiary-container rounded-xl shadow-2xl -rotate-3 flex items-center justify-center"><span class="material-symbols-outlined text-white/70" style="font-size:160px;">self_improvement</span></div>
+</div></section>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="md:col-span-1 bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(45,52,51,0.04)] border border-outline-variant/10">
+<div class="flex items-center justify-between mb-6"><h3 class="text-xl font-bold">Latest Check-in</h3><span class="text-xs font-bold text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full uppercase tracking-widest">Tuesday 2:30 PM</span></div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1;">sentiment_satisfied</span></div>
+<div><p class="text-sm text-on-surface-variant">Primary Mood</p><p class="text-xl font-bold">Calm &amp; Focused</p></div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl"><p class="text-sm italic text-on-surface-variant">"Had a good lunch, feeling ready for the math test. Trying to remember my breathing exercises."</p></div>
+<div class="flex gap-2 flex-wrap">
+<span class="bg-tertiary-container/40 text-on-tertiary-container px-3 py-1 rounded-full text-xs font-semibold">#Testing</span>
+<span class="bg-primary-container/40 text-on-primary-container px-3 py-1 rounded-full text-xs font-semibold">#Focused</span>
+</div></div></div>
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(45,52,51,0.04)] border border-outline-variant/10">
+<div class="flex items-center justify-between mb-8"><div><h3 class="text-xl font-bold">Mood Trends</h3><p class="text-sm text-on-surface-variant">Last 7 Days</p></div></div>
+<div class="h-48 w-full flex items-end justify-between gap-2 px-2">
+<div class="flex flex-col items-center gap-2 flex-1 group"><div class="w-full bg-tertiary-container/30 rounded-full h-24 relative overflow-hidden"><div class="absolute bottom-0 w-full bg-tertiary rounded-full" style="height:64%;"></div></div><span class="text-[10px] font-bold text-on-surface-variant">Mon</span></div>
+<div class="flex flex-col items-center gap-2 flex-1 group"><div class="w-full bg-tertiary-container/30 rounded-full h-24 relative overflow-hidden"><div class="absolute bottom-0 w-full bg-tertiary rounded-full" style="height:48%;"></div></div><span class="text-[10px] font-bold text-on-surface-variant">Tue</span></div>
+<div class="flex flex-col items-center gap-2 flex-1 group"><div class="w-full bg-tertiary-container/30 rounded-full h-24 relative overflow-hidden"><div class="absolute bottom-0 w-full bg-tertiary rounded-full" style="height:80%;"></div></div><span class="text-[10px] font-bold text-on-surface-variant">Wed</span></div>
+<div class="flex flex-col items-center gap-2 flex-1 group"><div class="w-full bg-tertiary-container/30 rounded-full h-24 relative overflow-hidden"><div class="absolute bottom-0 w-full bg-tertiary rounded-full" style="height:96%;"></div></div><span class="text-[10px] font-bold text-on-surface-variant">Thu</span></div>
+<div class="flex flex-col items-center gap-2 flex-1 group"><div class="w-full bg-tertiary-container/30 rounded-full h-24 relative overflow-hidden"><div class="absolute bottom-0 w-full bg-tertiary rounded-full" style="height:72%;"></div></div><span class="text-[10px] font-bold text-on-surface-variant">Fri</span></div>
+<div class="flex flex-col items-center gap-2 flex-1 group"><div class="w-full bg-tertiary-container/30 rounded-full h-24 relative overflow-hidden"><div class="absolute bottom-0 w-full bg-tertiary rounded-full" style="height:56%;"></div></div><span class="text-[10px] font-bold text-on-surface-variant">Sat</span></div>
+<div class="flex flex-col items-center gap-2 flex-1 group"><div class="w-full bg-tertiary-container/30 rounded-full h-24 relative overflow-hidden"><div class="absolute bottom-0 w-full bg-tertiary rounded-full" style="height:88%;"></div></div><span class="text-[10px] font-bold text-on-surface-variant">Sun</span></div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10 flex justify-between items-center">
+<div class="flex gap-4">
+<div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-tertiary"></div><span class="text-xs font-semibold text-on-surface-variant">Energy Levels</span></div>
+<div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-tertiary-container/60"></div><span class="text-xs font-semibold text-on-surface-variant">Emotional Balance</span></div>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 hover:underline" href="#">Detailed Insights <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div></div></div>
+<section class="flex flex-col lg:flex-row gap-8 items-start">
+<div class="lg:w-2/3 bg-surface-container-low rounded-xl p-8">
+<h3 class="text-2xl font-bold mb-6">Upcoming Support Sessions</h3>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between border border-outline-variant/10 transition-transform hover:-translate-y-1">
+<div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-primary-container text-primary flex items-center justify-center"><span class="material-symbols-outlined">group</span></div><div><h4 class="font-bold">Weekly Peer Circle</h4><p class="text-sm text-on-surface-variant">Tomorrow at 10:00 AM</p></div></div>
+<button class="bg-surface text-primary border border-primary/20 px-4 py-2 rounded-full text-sm font-bold hover:bg-primary-container/20">Details</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between border border-outline-variant/10 transition-transform hover:-translate-y-1">
+<div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-secondary-container text-secondary flex items-center justify-center"><span class="material-symbols-outlined">face</span></div><div><h4 class="font-bold">Check-in with Dr. Smith</h4><p class="text-sm text-on-surface-variant">Thursday at 3:30 PM</p></div></div>
+<button class="bg-surface text-primary border border-primary/20 px-4 py-2 rounded-full text-sm font-bold hover:bg-primary-container/20">Details</button>
+</div></div></div>
+<div class="lg:w-1/3 w-full space-y-6">
+<div class="primary-gradient p-8 rounded-xl text-on-primary relative overflow-hidden">
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-9xl opacity-10">auto_awesome</span>
+<h4 class="text-xl font-bold mb-2">Daily Affirmation</h4>
+<p class="text-lg italic opacity-90 leading-relaxed font-light">"You don't have to see the whole staircase, just take the first step."</p>
+<div class="mt-6 flex justify-between items-center">
+<span class="text-xs font-bold uppercase tracking-widest opacity-70">Focus: Resilience</span>
+<button class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/40"><span class="material-symbols-outlined text-sm">share</span></button>
+</div></div>
+<div class="bg-tertiary-container/30 p-8 rounded-xl border border-tertiary-container/20">
+<h4 class="text-on-tertiary-container font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined">lightbulb</span> Quick Resource</h4>
+<p class="text-sm text-on-tertiary-container/80 mb-4">Feeling overwhelmed? Try the 5-4-3-2-1 grounding technique.</p>
+<a class="text-sm font-bold text-tertiary hover:underline" href="#">Read the guide</a>
+</div></div></section>
+</main>
+<script src="nav.js"></script>
+</body></html>
